@@ -26,7 +26,7 @@ func TestSamsungExlink(t *testing.T) {
 		t.Error(err)
 		return
 	}
-    time.Sleep(10 * time.Second)
+	time.Sleep(10 * time.Second)
 
 	// switch to HDMI 1
 	err = device.SourceHDMI1()
@@ -34,7 +34,7 @@ func TestSamsungExlink(t *testing.T) {
 		t.Error(err)
 		return
 	}
-    time.Sleep(10 * time.Second)
+	time.Sleep(10 * time.Second)
 
 	// switch to HDMI 2
 	err = device.SourceHDMI2()
@@ -42,7 +42,7 @@ func TestSamsungExlink(t *testing.T) {
 		t.Error(err)
 		return
 	}
-    time.Sleep(10 * time.Second)
+	time.Sleep(10 * time.Second)
 
 	// turn off the EX-Link device
 	err = device.PowerOff()
