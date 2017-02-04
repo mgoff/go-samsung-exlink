@@ -1,5 +1,5 @@
 # go-samsung-ex-link
-This is a Go library for controlling Samsung TVs through the EX-Link serial port included on most models. The EX-Link connection is 3.5mm stereo jack identical to a standard headphone connector. In order to connect your TV to a computer, you'll need a [3.5mm stereo jack to serial adapter][http://amzn.to/2kbBTj5] along with a serial to USB adapter such as the [Keyspan USA-19H][http://amzn.to/2kqXvGI] or [IOGEAR GUC232A][http://amzn.to/2kCpGVB]. These models have been tested successfully to control Samsung TVs from both a [Raspberry Pi 3][http://amzn.to/2l6O66m] and a MacBook Pro.
+This is a Go library for controlling Samsung TVs through the EX-Link serial port included on most models. The EX-Link connection is 3.5mm stereo jack identical to a standard headphone connector. In order to connect your TV to a computer, you'll need a [3.5mm stereo jack to serial adapter](http://amzn.to/2kbBTj5) along with a serial to USB adapter such as the [Keyspan USA-19H](http://amzn.to/2kqXvGI) or [IOGEAR GUC232A](http://amzn.to/2kCpGVB). These models have been tested successfully to control Samsung TVs from both a [Raspberry Pi 3](http://amzn.to/2l6O66m) and a MacBook Pro.
 
 Installation
 ============
