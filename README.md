@@ -11,7 +11,7 @@ Simply use `go install`:
 Use
 ===
 
-Call `exlink.Open` with the path to your serial port such as `/dev/ttyUSB0`. Then call various functions to control the TV. Sleeps have been included between function calls to allow you to see the results of the commands through your TV's on-screen display.
+Call `exlink.Open` with the path to your serial port such as `/dev/ttyUSB0`. Then call various functions to control the TV. Sleeps have been included between function calls in the example below to allow you to see the results of the commands through your TV's on-screen display.
 
 ````go
 	package main
