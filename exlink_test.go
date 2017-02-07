@@ -28,6 +28,38 @@ func TestSamsungExlink(t *testing.T) {
 	}
 	time.Sleep(10 * time.Second)
 
+	// volume up
+	err = device.VolumeUp()
+	if err != nil {
+		t.Error(err)
+		return
+	}
+	time.Sleep(10 * time.Second)
+
+	// volume down
+	err = device.VolumeDown()
+	if err != nil {
+		t.Error(err)
+		return
+	}
+	time.Sleep(10 * time.Second)
+
+	// speaker off
+	err = device.SpeakerOff()
+	if err != nil {
+		t.Error(err)
+		return
+	}
+	time.Sleep(10 * time.Second)
+
+	// speaker on
+	err = device.SpeakerOn()
+	if err != nil {
+		t.Error(err)
+		return
+	}
+	time.Sleep(10 * time.Second)
+
 	// switch to HDMI 1
 	err = device.SourceHDMI1()
 	if err != nil {

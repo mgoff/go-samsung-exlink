@@ -102,6 +102,46 @@ func (e Exlink) PowerOff() error {
 	}
 }
 
+// volume up
+func (e Exlink) VolumeUp() error {
+	err := e.Send(volumeUp)
+	if err != nil {
+		return err
+	} else {
+		return nil
+	}
+}
+
+// volume down
+func (e Exlink) VolumeDown() error {
+	err := e.Send(volumeDown)
+	if err != nil {
+		return err
+	} else {
+		return nil
+	}
+}
+
+// turn on speakers
+func (e Exlink) SpeakerOn() error {
+	err := e.Send(speakerOn)
+	if err != nil {
+		return err
+	} else {
+		return nil
+	}
+}
+
+// turn on speakers
+func (e Exlink) SpeakerOff() error {
+	err := e.Send(speakerOff)
+	if err != nil {
+		return err
+	} else {
+		return nil
+	}
+}
+
 // switch to source input HDMI1
 func (e Exlink) SourceHDMI1() error {
 	err := e.Send(hdmi1)
