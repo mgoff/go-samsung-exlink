@@ -7,7 +7,7 @@ import (
 
 // udpate devicePath with your serial port path before running 'go test'
 const (
-	devicePath = "/dev/tty.KeySerial1"
+	devicePath = "/dev/ttyUSB0"
 )
 
 // sleep in between test commands so you can watch the results on your TV

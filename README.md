@@ -27,29 +27,39 @@ Call `exlink.Open` with the path to your serial port such as `/dev/ttyUSB0` or `
 	func main() {
 
 		// open the connection to the EX-Link device
-		device, err := exlink.Open("/dev/tty.KeySerial1")
-		if err != nil { log.Fatal(err) }
+		device, err := exlink.Open("/dev/ttyUSB0")
+		if err != nil {
+			log.Fatal(err)
+		}
 
 		// close the connection at the end
 		defer device.Close()
 
 		// turn on the EX-Link device
 		err = device.PowerOn()
-		if err != nil { log.Fatal(err) }
+		if err != nil {
+			log.Fatal(err)
+		}
 		time.Sleep(10 * time.Second)
 
 		// switch to HDMI 1
 		err = device.SourceHDMI1()
-		if err != nil { log.Fatal(err) }
+		if err != nil {
+			log.Fatal(err)
+		}
 		time.Sleep(10 * time.Second)
 
 		// switch to HDMI 2
 		err = device.SourceHDMI2()
-		if err != nil { log.Fatal(err) }
+		if err != nil {
+			log.Fatal(err)
+		}
 		time.Sleep(10 * time.Second)
 
 		// turn off the EX-Link device
 		err = device.PowerOff()
-		if err != nil { log.Fatal(err) }
+		if err != nil {
+			log.Fatal(err)
+		}
 	}
 ````
