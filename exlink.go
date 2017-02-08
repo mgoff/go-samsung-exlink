@@ -8,22 +8,22 @@ import (
 
 // hex codes from the EX-Link protocol
 const (
-	powerOn		= "082200000002d6"
-	powerOff	= "082200000001d5"
-	volumeUp	= "082201000100d4"
-	volumeDown	= "082201000200d3"
-	speakerOn	= "08220c060000c4"
-	speakerOff	= "08220c060001c3"
-	hdmi1		= "08220a000500c7"
-	hdmi2		= "08220a000501c6"
+	powerOn    = "082200000002d6"
+	powerOff   = "082200000001d5"
+	volumeUp   = "082201000100d4"
+	volumeDown = "082201000200d3"
+	speakerOn  = "08220c060000c4"
+	speakerOff = "08220c060001c3"
+	hdmi1      = "08220a000500c7"
+	hdmi2      = "08220a000501c6"
 )
 
 // serial port parameters for EX-Link devices
 const (
-	baudRate	= 9600
-	dataBits	= 8
-	stopBits	= 1
-	minReadSize	= 4
+	baudRate    = 9600
+	dataBits    = 8
+	stopBits    = 1
+	minReadSize = 4
 )
 
 // struct used to hold our serial connection
@@ -36,19 +36,19 @@ func Open(device string) (Exlink, error) {
 
 	// setup serial port options
 	options := serial.OpenOptions{
-		PortName: device,
-		BaudRate: baudRate,
-		DataBits: dataBits,
-		StopBits: stopBits,
+		PortName:        device,
+		BaudRate:        baudRate,
+		DataBits:        dataBits,
+		StopBits:        stopBits,
 		MinimumReadSize: minReadSize,
-  	}
+	}
 
 	// open the port
 	port, err := serial.Open(options)
 	if err != nil {
 		return Exlink{}, err
 	} else {
-		exlink := Exlink{port:port}
+		exlink := Exlink{port: port}
 		return exlink, nil
 	}
 }

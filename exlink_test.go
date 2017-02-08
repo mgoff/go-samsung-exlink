@@ -13,79 +13,61 @@ const (
 // sleep in between test commands so you can watch the results on your TV
 func TestSamsungExlink(t *testing.T) {
 
-	// open the connection to the EX-Link device
+	// open the serial connection to the EX-Link device
 	device, err := Open(devicePath)
 	if err != nil {
 		t.Error(err)
-		return
 	}
 
 	// turn on the EX-Link device
-	err = device.PowerOn()
-	if err != nil {
+	if device.PowerOn() != nil {
 		t.Error(err)
-		return
 	}
 	time.Sleep(10 * time.Second)
 
 	// volume up
-	err = device.VolumeUp()
-	if err != nil {
+	if device.VolumeUp() != nil {
 		t.Error(err)
-		return
 	}
 	time.Sleep(10 * time.Second)
 
 	// volume down
-	err = device.VolumeDown()
-	if err != nil {
+	if device.VolumeDown() != nil {
 		t.Error(err)
-		return
 	}
 	time.Sleep(10 * time.Second)
 
 	// speaker off
-	err = device.SpeakerOff()
-	if err != nil {
+	if device.SpeakerOff() != nil {
 		t.Error(err)
-		return
 	}
 	time.Sleep(10 * time.Second)
 
 	// speaker on
-	err = device.SpeakerOn()
-	if err != nil {
+	if device.SpeakerOn() != nil {
 		t.Error(err)
-		return
 	}
 	time.Sleep(10 * time.Second)
 
 	// switch to HDMI 1
-	err = device.SourceHDMI1()
-	if err != nil {
+	if device.SourceHDMI1() != nil {
 		t.Error(err)
-		return
 	}
 	time.Sleep(10 * time.Second)
 
 	// switch to HDMI 2
-	err = device.SourceHDMI2()
-	if err != nil {
+	if device.SourceHDMI2() != nil {
 		t.Error(err)
-		return
 	}
 	time.Sleep(10 * time.Second)
 
 	// turn off the EX-Link device
-	err = device.PowerOff()
-	if err != nil {
+	if device.PowerOff() != nil {
 		t.Error(err)
-		return
 	}
 
-	// close the connection to the EX-Link device
-	err = device.Close()
-	if err != nil {
+	// close the serial connection to the EX-Link device
+	if device.Close() != nil {
 		t.Error(err)
 	}
 }
